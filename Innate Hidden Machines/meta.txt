@@ -1,0 +1,5 @@
+Name       = Innate Hidden Machines
+Version    = v1.0.0
+Essentials = 20.1
+Website    = https://github.com/MickTK/Essentials-Plugins
+Credits    = MickTK
