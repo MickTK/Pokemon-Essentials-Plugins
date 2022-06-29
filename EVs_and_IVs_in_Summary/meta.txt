@@ -1,0 +1,5 @@
+Name       = EVs and IVs in Summary
+Version    = 1.0.0
+Essentials = 20.1
+Website    = https://reliccastle.com/resources/703/
+Credits    = Deoxysprime, MickTK

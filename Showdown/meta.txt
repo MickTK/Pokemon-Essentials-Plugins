@@ -1,5 +1,5 @@
 Name       = Showdown
-Version    = v0.5.0
+Version    = 0.5.0
 Essentials = 20.1
 Website    = https://github.com/MickTK/Essentials-Plugins
 Credits    = MickTK
