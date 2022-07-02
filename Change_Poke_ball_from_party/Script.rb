@@ -3,7 +3,7 @@ MenuHandlers.add(:party_menu, :pokeball, {
   "order"     => 50,
   "condition" => proc { |screen, party, party_idx| next !party[party_idx].egg? },
   "effect"    => proc { |screen, party, party_idx|
-		keep_old = false
+    keep_old = false
     pkmn = party[party_idx]
 		pbChooseItem(1)
 		pokeballs = [:MASTERBALL, :ULTRABALL, :GREATBALL, 

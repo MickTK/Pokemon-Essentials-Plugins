@@ -3,12 +3,12 @@ def pbDailyReward()
 end
 class DailyReward
 	@@last_login  = nil # Date of last login
-	@@logins      = 1		# Total logins
-	@@consecutive = 1	  # Number of consecutive logins
+	@@logins      = 1   # Total logins
+	@@consecutive = 1   # Number of consecutive logins
 
   def self.check()
     now = Time.now
-		@@last_login = (now-(60*60*24)) if @@last_login == nil
+    @@last_login = (now-(60*60*24)) if @@last_login == nil
     days_passed = ((Time.local(now.year,now.month,now.day)-Time.local(@@last_login.year,@@last_login.month,@@last_login.day))/(60*60*24)).to_i
     case days_passed
 		when 0

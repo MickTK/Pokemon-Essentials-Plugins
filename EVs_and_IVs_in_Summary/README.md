@@ -4,7 +4,7 @@ Show EVs and IVs in the pokémon summary page.
 ## Instructions
 Put the file `bg_3_deoxysprime.png` inside the folder `Graphics/Pictures/Summary`.
 
-Shoutout to [Deoxysprime](https://reliccastle.com/resources/703/) for the simple but pretty usefull plugin.
+Credits to [Deoxysprime](https://reliccastle.com/resources/703/).
 
 ## Updates
 - From original

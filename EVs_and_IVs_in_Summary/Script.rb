@@ -1,6 +1,6 @@
 class PokemonSummary_Scene
   def drawPageThree
-		# Set background image
+    # Set background image
     @sprites["background"].setBitmap("Graphics/Pictures/Summary/bg_3_deoxysprime")
     overlay = @sprites["overlay"].bitmap
     base   = Color.new(248,248,248)
