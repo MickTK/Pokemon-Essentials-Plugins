@@ -1,3 +1,11 @@
+class Pokemon
+  def compatible_with_move?(move_id)
+    move_data = GameData::Move.try_get(move_id)
+    return move_data && species_data.tutor_moves.include?(move_data.id)
+  end
+end
+
+
 # Party UI commands
 class PokemonPartyScreen
 	def pbPokemonScreen
@@ -39,18 +47,20 @@ class PokemonPartyScreen
 				insert_index = ($DEBUG) ? 2 : 1
 				hms = [
 					:CUT, :HEADBUTT, :ROCKSMASH, :STRENGTH, :SURF, :DIVE, 
-					:WATERFALL, :CHATTER, :DIG, :FLASH, :FLASH, :MILK, :DRINK, 
-					:SOFTBOILED, :SWEETSCENT, :TELEPORT
+					:WATERFALL, :CHATTER, :DIG, :TELEPORT, :FLASH, :MILKDRINK, 
+					:SOFTBOILED, :SWEETSCENT, :FLY
 				]
 				map = {}
 				i = 0
+        # Add hm if can be used
 				for hm in hms do 
-					next if !pkmn.compatible_with_move?(hm) || !pbCanUseHiddenMove?(pkmn,hm,false)
-					command_list.insert(insert_index, [GameData::Move.get(hm).name, 1])
-					commands.insert(insert_index, i)
-					map[i] = hm
-					insert_index += 1
-					i += 1
+          if (pkmn.hasMove?(hm) || pkmn.compatible_with_move?(hm)) && pbCanUseHiddenMove?(pkmn,hm,false)
+            command_list.insert(insert_index, [GameData::Move.get(hm).name, 1])
+            commands.insert(insert_index, i)
+            map[i] = hm
+            insert_index += 1
+            i += 1
+          end
 				end
 			end
 			# Choose a menu option
@@ -225,14 +235,8 @@ HiddenMoveHandlers::CanUseMove.add(:FLASH, proc { |move, pkmn, showmsg|
 })
 # Fly
 def pbCanFly?(pkmn = nil, show_messages = false)
-  a = nil
-	for p in $player.party do
-		if p.compatible_with_move?(:FLY)
-			a = p
-			break
-		end
-	end
-  return false if !$DEBUG && !pkmn && !a
+  return false if !$DEBUG && !pkmn
+  return false if !pkmn.compatible_with_move?(:FLY)
   if !$game_player.can_map_transfer_with_follower?
     pbMessage(_INTL("It can't be used when you have someone with you.")) if show_messages
     return false
