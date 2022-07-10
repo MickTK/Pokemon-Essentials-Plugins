@@ -1,2 +1,0 @@
-# CMD
-Batch terminal.
