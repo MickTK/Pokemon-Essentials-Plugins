@@ -5,7 +5,6 @@ class Pokemon
   end
 end
 
-
 # Party UI commands
 class PokemonPartyScreen
 	def pbPokemonScreen
@@ -236,7 +235,7 @@ HiddenMoveHandlers::CanUseMove.add(:FLASH, proc { |move, pkmn, showmsg|
 # Fly
 def pbCanFly?(pkmn = nil, show_messages = false)
   return false if !$DEBUG && !pkmn
-  return false if !pkmn.compatible_with_move?(:FLY)
+  return false if pkmn == nil || !pkmn.compatible_with_move?(:FLY)
   if !$game_player.can_map_transfer_with_follower?
     pbMessage(_INTL("It can't be used when you have someone with you.")) if show_messages
     return false
@@ -245,43 +244,6 @@ def pbCanFly?(pkmn = nil, show_messages = false)
     pbMessage(_INTL("You can't use that here.")) if show_messages
     return false
   end
-  return true
-end
-def pbFlyToNewLocation(pkmn = nil, move = :FLY)
-  return false if $game_temp.fly_destination.nil?
-  if !pkmn
-		for p in $player.party do
-			if p.compatible_with_move?(move)
-				pkmn = p
-				break
-			end
-		end
-	end
-
-  if !$DEBUG && !pkmn
-    $game_temp.fly_destination = nil
-    yield if block_given?
-    return false
-  end
-  if !pkmn || !pbHiddenMoveAnimation(pkmn)
-    name = pkmn&.name || $player.name
-    pbMessage(_INTL("{1} used {2}!", name, GameData::Move.get(move).name))
-  end
-  $stats.fly_count += 1
-  pbFadeOutIn {
-    pbSEPlay("Fly")
-    $game_temp.player_new_map_id    = $game_temp.fly_destination[0]
-    $game_temp.player_new_x         = $game_temp.fly_destination[1]
-    $game_temp.player_new_y         = $game_temp.fly_destination[2]
-    $game_temp.player_new_direction = 2
-    $game_temp.fly_destination = nil
-    $scene.transfer_player
-    $game_map.autoplay
-    $game_map.refresh
-    yield if block_given?
-    pbWait(Graphics.frame_rate / 4)
-  }
-  pbEraseEscapePoint
   return true
 end
 # Headbutt

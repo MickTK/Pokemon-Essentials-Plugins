@@ -1,6 +1,6 @@
 ![Category](https://badgen.net/badge/Category/Gameplay/green)
 ![Essentials](https://badgen.net/badge/Essentials/20.1/orange)
-![Version](https://badgen.net/badge/Version/1.0.2/cyan)
+![Version](https://badgen.net/badge/Version/1.0.3/cyan)
 
 <h1 align="center">Innate Hidden Machines</h1>
 
@@ -19,6 +19,8 @@ Use HMs with a pokémon which can learn that move (even without knowing it!). Al
 <br>
 
 ## Updates
+- 1.0.3
+  - Minor fix
 - 1.0.2
   - Bug fixes
 - 1.0.1
