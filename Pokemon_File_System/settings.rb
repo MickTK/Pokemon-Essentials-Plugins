@@ -4,7 +4,7 @@
 module PokemonFile
 
 	# Export settings
-	DELETE_AFTER_EXPORT = true        # The Pokémon will be deleted from the party after export
+	DELETE_AFTER_EXPORT = true         # The Pokémon will be deleted from the party after export
 
 	# Import settings
 	DELETE_AFTER_IMPORT = true         # The file will be deleted after import

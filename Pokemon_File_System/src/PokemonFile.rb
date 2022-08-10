@@ -76,7 +76,7 @@ module PokemonFile
     file_name = Dir.entries(DIRECTORY) #=> [".", "..", "config.h", "main.rb"]
 
 		# Return false if the folder is empty
-    return nil if file_name.length < 3
+    return false if file_name.length < 3
 
     # Get the first file in the directory
     file_path = DIRECTORY + "/" + file_name[2]
@@ -95,7 +95,7 @@ module PokemonFile
       pkmn << Marshal.load(file) until file.eof?
     }
 
-		return nil if !pkmn.is_a?(Pokemon)
+		return false if !pkmn.is_a?(Pokemon)
 
 		# Delete the file
     File.delete(file_path) if DELETE_AFTER_IMPORT
@@ -115,6 +115,7 @@ class Pokemon
 		map["species"] = species
 		map["form"]    = form
 		map["level"]   = level
+		map["exp"]     = exp
 		map["steps_to_hatch"] = steps_to_hatch
 		map["gender"]  = gender
 		map["shiny"]   = shiny?
@@ -127,7 +128,7 @@ class Pokemon
 			map["moves"].append(move.id)
 		end
 		map["first_moves"] = first_moves
-		map["ribbons"]     = ribbons # Broken
+		map["ribbons"]     = ribbons
 		map["cool"]        = cool
 		map["beauty"]      = beauty
 		map["cute"]        = cute
@@ -156,13 +157,32 @@ class Pokemon
 		map["timeEggHatched"] = timeEggHatched
 		map["personalID"]     = personalID
 
-		if PluginManager.installed?("ZUD Plugin")
-			map["reverted"]    = @reverted,
-			map["dynamax_lvl"] = @dynamax_lvl,
-			map["gmaxfactor"]  = @gmaxfactor,
-			map["acepkmn"]     = @acepkmn
-		end
+		#=============
+		# ZUD Plugin
+		#=============
+		if PluginManager.installed?("ZUD Mechanics") || 
+			 PluginManager.installed?("ZUD Plugin")
+			
+			# Version 20
+			if Essentials::VERSION.include?("20")
+				map["reverted"]    = @reverted
+				map["dynamax_lvl"] = @dynamax_lvl
+				map["gmax_factor"] = @gmax_factor
 
+			# Version 19
+			elsif Essentials::VERSION.include?("19")
+				map["reverted"]    = @reverted
+				map["dynamax_lvl"] = @dynamax_lvl
+				map["gmax_factor"] = @gmaxfactor
+
+			# Other versions
+			else
+				map["reverted"]    = false
+				map["dynamax_lvl"] = 0
+				map["gmax_factor"] = false
+			end
+		end
+		
 		return map
 	end
 
@@ -172,6 +192,7 @@ class Pokemon
 			@species        = GameData::Species.get(map["species"]).id
 			@form           = map["form"]
 			@level          = map["level"].clamp(1, Settings::MAXIMUM_LEVEL)
+			@exp            = map["exp"] ? map["exp"] : 0
 			@steps_to_hatch = map["steps_to_hatch"]
 			@gender         = map["gender"]
 			@shiny          = map["shiny"]
@@ -185,7 +206,14 @@ class Pokemon
 			end
       @moves = list
 			@first_moves = map["first_moves"]
-			@ribbons 		 = map["ribbons"] # Broken
+
+			# Often ribbons freeze the game ¯\_(ツ)_/¯
+			begin
+				@ribbons = map["ribbons"]
+			rescue Exception => e
+				puts e.message
+			end
+
 			@cool        = map["cool"]
 			@beauty      = map["beauty"]
 			@cute        = map["cute"]
@@ -196,7 +224,35 @@ class Pokemon
 			@name        = map["name"]
 			@happiness   = map["happiness"]
 			@poke_ball   = map["poke_ball"]
+
+			# Markings are treated in two different ways: 
+			# - in v20 is an Array of Integers (only 0s and 1s)
+			# - in v19 is an Integer used as a bitmap (0 -> no mark, 1 -> mark)
+			# Values are read from right to left.
+			if Essentials::VERSION.include?("20")
+				if map["markings"].is_a?(Integer)
+					bits = map["markings"].to_s(2).reverse.split(//)
+					array = []
+					for i in bits do
+						array.append(i.to_i)
+					end
+					map["markings"] = array
+				end
+			elsif Essentials::VERSION.include?("19")
+				if map["markings"].kind_of?(Array)
+					bits = ""
+					for i in map["markings"] do
+						if !i
+							bits = "0" + bits
+						else
+							bits = i.to_s + bits
+						end
+					end
+					map["markings"] = bits.to_i(2)
+				end
+			end
 			@markings    = map["markings"]
+
 			@iv          = map["iv"]
 			@ev          = map["ev"]
 			@owner       = Pokemon::Owner.new(
@@ -214,13 +270,23 @@ class Pokemon
 			@timeEggHatched = map["timeEggHatched"]
 			@personalID     = map["personalID"]
 
-			if PluginManager.installed?("ZUD Plugin")
-				@reverted    = map["reverted"],
-				@dynamax_lvl = map["dynamax_lvl"],
-				@gmaxfactor  = map["gmaxfactor"],
-				@acepkmn     = map["acepkmn"]
-			end
+			#=============
+			# ZUD Plugin
+			#=============
 			
+			# Version 20
+			if Essentials::VERSION.include?("20")
+				@reverted    = map["reverted"]
+				@dynamax_lvl = map["dynamax_lvl"]
+				@gmax_factor = map["gmax_factor"] ? map["gmax_factor"] : map["gmaxfactor"]
+
+			# Version 19
+			elsif Essentials::VERSION.include?("19")
+				@reverted    = map["reverted"]
+				@dynamax_lvl = map["dynamax_lvl"]
+				@gmaxfactor  = map["gmax_factor"] ? map["gmax_factor"] : map["gmaxfactor"]
+			end
+
 			calc_stats
 		rescue Exception => e
 			puts e.message

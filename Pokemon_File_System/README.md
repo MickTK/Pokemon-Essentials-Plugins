@@ -1,6 +1,6 @@
 ![Category](https://badgen.net/badge/Category/Utility/green)
 ![Essentials](https://badgen.net/badge/Essentials/20.1/orange)
-![Version](https://badgen.net/badge/Version/1.0.0/cyan)
+![Version](https://badgen.net/badge/Version/1.1.0/cyan)
 
 <p align="center">
 <img width="200px" src="https://user-images.githubusercontent.com/63038410/178041105-855c7976-74ef-4400-8a16-a413cd65f489.png">
@@ -12,7 +12,10 @@
 Export/import Pokémons as files.
 </p>
 <p align="center">
-Share them between different games (made with essentials) or trade them with your friends.
+Share them between different games (made with essentials) or trade them with your friends. 
+<p>
+<p align="center">
+Works with Essentials v20.1 and v19.1 and is full compatible with the ZUD Plugin!
 </p>
 
 <br>
@@ -22,21 +25,29 @@ Share them between different games (made with essentials) or trade them with you
 <br>
 
 ## Instructions
-`PokemonFile` is the core of the plugin. It contains the main methods for export and import a Pokémon as files. It works even for v19.1 and is compatible with ZUD Plugin.
 
-`PokemonFile_Scene` manages the animations for the export and for the import.
+If you wanna transfer a pokémon from game A to game B you have to make sure that both games uses the same environment. For example if a pokémon is inside a "Cheese Ball" and it is trasfered to game B, game B should have the same ball, otherwise the game will crash. Same thing for pokémons, moves, ribbons and items in general.
 
-`Showdown` converts and exports a Pokémon in Showdown format.
+For v19.1 usage: delete the "Essentials" line in the `meta.txt` file.
 
-`pbExportPokemonFile` and `pbImportPokemonFile` work as wrappers.
+`PokemonFile_Scene` manages the animations for export and import (only for Essentials v20.1).
 
 Check `settings.rb` for configuration.
 
 ## Informations
 | Information | Description |
 |:-|:-|
-| `pbExportPokemonFile(nil, true)` | Export a Pokémon chosen from the party and show the animation. |
-| `pbImportPokemonFile(true, true)` | Import a Pokémon, show the animation and add it silently. |
+| `pbExportPokemonFile(nil, true)` | (v20.1 only) Export a Pokémon chosen from the party and show the animation. |
+| `pbImportPokemonFile(true, true)` | (v20.1 only) Import a Pokémon, show the animation and add it silently. |
 | `PokemonFile.export(pokemon)` | Export a Pokémon. |
 | `PokemonFile.import` | Import a Pokémon. It will be the first file in the folder. |
 | `Showdown.export(pokemon)` | Export a Pokémon in Showdown format. |
+
+<details>
+<summary>Updates</summary>
+
+#### 1.1.0
+- Added ZUD Plugin compatibility for Essentials v20.1
+- Fixed some bugs for compatibility with Essentials v19.1
+
+</details>

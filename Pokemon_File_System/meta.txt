@@ -1,5 +1,6 @@
 Name       = Pokémon File System
-Version    = 1.0.0
+Version    = 1.1.0
 Essentials = 20.1
+Optional   = ZUD Plugin
 Website    = https://github.com/MickTK/Essentials-Plugins
 Credits    = MickTK
