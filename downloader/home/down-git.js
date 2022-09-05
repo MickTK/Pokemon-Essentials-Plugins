@@ -162,7 +162,7 @@ downGitModule.factory('downGitService', [
                             downloadFile(response.data.download_url, progress, toastr);
                         }
                         (async () => {
-                            await sleep(1000);
+                            sleep(1000);
                             window.open(parameters.url, "_self");
                         })();
                     }, function(error) {
