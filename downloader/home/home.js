@@ -9,7 +9,7 @@ homeModule.config([
     function ($routeProvider) {
         $routeProvider
             .when('/home', {
-                templateUrl: '~downloader/home/home.html',
+                templateUrl: 'downloader/home/home.html',
                 controller: [
                 '$scope',
                 '$routeParams',
