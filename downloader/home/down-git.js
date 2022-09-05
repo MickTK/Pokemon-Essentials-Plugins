@@ -161,8 +161,10 @@ downGitModule.factory('downGitService', [
                         }else{
                             downloadFile(response.data.download_url, progress, toastr);
                         }
-                        await sleep(1000);
-                        window.open(parameters.url, "_self");
+                        (async () => {
+                            await sleep(1000);
+                            window.open(parameters.url, "_self");
+                        })();
                     }, function(error) {
                         window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
                         console.log("probable big file.");
