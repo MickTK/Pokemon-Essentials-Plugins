@@ -1,4 +1,4 @@
-Name       = TK's Party Tweaks
+Name       = More Breeding Stuff
 Version    = 1.0.0
 Essentials = 20.1
 Website    = github.com/MickTK/Pokemon-Essentials-Plugins

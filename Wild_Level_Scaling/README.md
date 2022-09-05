@@ -13,7 +13,7 @@ Set wild pokemons level range dynamically.
 </p>
 
 <br>
-<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MickTK/Essentials-Plugins/tree/main/Wild_Level_Scaling&fileName=Wild_Level_Scaling&rootDirectory=true"><p align="center">
+<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/Wild_Level_Scaling&fileName=Wild_Level_Scaling&rootDirectory=true"><p align="center">
 <img src="https://custom-icon-badges.herokuapp.com/badge/-Download-red?style=for-the-badge&logo=download&logoColor=white">
 </p></a>
 <br>

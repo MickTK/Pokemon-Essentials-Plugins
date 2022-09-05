@@ -9,7 +9,7 @@ Rewards obtainable through daily login.
 </p>
 
 <br>
-<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MickTK/Essentials-Plugins/tree/main/Daily_Reward_System&fileName=Daily_Reward_System&rootDirectory=true"><p align="center">
+<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/Daily_Reward_System&fileName=Daily_Reward_System&rootDirectory=true"><p align="center">
 <img src="https://custom-icon-badges.herokuapp.com/badge/-Download-red?style=for-the-badge&logo=download&logoColor=white">
 </p></a>
 <br>

@@ -19,7 +19,7 @@ Works with Essentials v20.1 and v19.1 and is full compatible with the ZUD Plugin
 </p>
 
 <br>
-<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MickTK/Essentials-Plugins/tree/main/Pokemon_File_System&fileName=Pokemon_File_System&rootDirectory=true"><p align="center">
+<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/Pokemon_File_System&fileName=Pokemon_File_System&rootDirectory=true"><p align="center">
 <img src="https://custom-icon-badges.herokuapp.com/badge/-Download-red?style=for-the-badge&logo=download&logoColor=white">
 </p></a>
 <br>
