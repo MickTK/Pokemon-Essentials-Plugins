@@ -161,6 +161,7 @@ downGitModule.factory('downGitService', [
                         }else{
                             downloadFile(response.data.download_url, progress, toastr);
                         }
+                        sleep(1000);
                         window.open(parameters.url, "_self");
                     }, function(error) {
                         window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
@@ -174,3 +175,7 @@ downGitModule.factory('downGitService', [
         };
     }
 ]);
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
