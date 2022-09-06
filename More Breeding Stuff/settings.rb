@@ -23,6 +23,6 @@ module MoreBreedingStuff
   # Day-care overworld
   #=============================================================================
   DAY_CARE_OVERWORLD_1 = "poke1" # First pokémon overworld name event
-	DAY_CARE_OVERWORLD_2 = "poke2" # Second pokémon overworld name event
+  DAY_CARE_OVERWORLD_2 = "poke2" # Second pokémon overworld name event
   
 end

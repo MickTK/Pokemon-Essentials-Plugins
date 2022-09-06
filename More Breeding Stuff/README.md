@@ -1,6 +1,6 @@
 ![Category](https://badgen.net/badge/Category/Utility/green)
 ![Essentials](https://badgen.net/badge/Essentials/20.1/orange)
-![Version](https://badgen.net/badge/Version/1.0.0/cyan)
+![Version](https://badgen.net/badge/Version/1.0.1/cyan)
 
 <h1 align="center">More Breeding Stuff</h1>
 
@@ -49,6 +49,15 @@ Check `settings.rb` for configuration.
 | Information | Description |
 |:-|:-|
 | `DayCare.overworld_action(event)` | Used to play the cry and tell the player how much their pokémons are compatible. You can use `get_self` (like the instructions) as parameter to call the method from the event itself. |
+
+<details>
+<summary>Updates</summary>
+
+#### 1.0.1
+- Corrected screen path.
+
+</details>
+<br>
 
 ## Credits
 - [Lucidious89](https://reliccastle.com/members/7705/): egg group icons.

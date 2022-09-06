@@ -1,5 +1,5 @@
 Name       = More Breeding Stuff
-Version    = 1.0.0
+Version    = 1.0.1
 Essentials = 20.1
 Website    = github.com/MickTK/Pokemon-Essentials-Plugins
 Credits    = MickTK
