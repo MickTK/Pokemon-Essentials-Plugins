@@ -55,6 +55,7 @@ Check `settings.rb` for configuration.
 
 #### 1.0.1
 - Corrected screen path.
+- Corrected directory url.
 
 </details>
 <br>
