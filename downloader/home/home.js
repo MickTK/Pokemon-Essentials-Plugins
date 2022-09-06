@@ -50,8 +50,8 @@ homeModule.config([
                         downGitService.downloadZippedFiles(parameter, progress, toastr);
 
                     } else if ($scope.url != "") {
-                        window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
                         toastr.warning("Invalid URL!", {iconClass: 'toast-down'});
+                        window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
                     }
 
                     $scope.catchEnter = function(keyEvent) {
@@ -70,8 +70,8 @@ homeModule.config([
                         if ($scope.url.match(templateUrl)) {
                             $scope.downUrl = downloadUrlPrefix + $scope.url;
                         } else {
-                            window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
                             toastr.warning("Invalid URL!", {iconClass: 'toast-down'});
+                            window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
                         }
                     };
 

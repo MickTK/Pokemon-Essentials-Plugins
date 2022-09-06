@@ -1,11 +1,21 @@
-﻿<div class="home">
+﻿<head>
+    <style>
+        * {
+            background-color: black;
+            color: black;
+            display: none;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<div class="home">
 <div class="text-center">
 
     <div class="vertical-space"></div>
     <h1><a href="https://minhaskamal.github.io/DownGit">DownGit</a></h1>
     <div class="center-row"></div>
     <h4>Create GitHub Resource Download Link</h4>
-
 
     <div class="vertical-space"></div>
     <div class="col-md-6 center-row">
@@ -19,7 +29,7 @@
 
     <div ng-show="isProcessing.val">
         <div class="vertical-space"></div>
-        <img class="processing-img" src="res/images/processing.gif" />
+        <!-- <img class="processing-img" src="res/images/processing.gif" /> -->
         <p>Downloaded {{downloadedFiles.val}} of {{totalFiles.val}} files</p>
     </div>
 

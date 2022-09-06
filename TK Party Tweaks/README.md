@@ -13,7 +13,10 @@ A bunch of script that add more functions to the party menu.
 </p>
 
 <br>
-<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/TK_Party_Tweaks&fileName=TK_Party_Tweaks&rootDirectory=true"><p align="center">
+<a href="https://micktk.github.io/Pokemon-Essentials-Plugins/index.html#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/
+TK%20Party%20Tweaks
+&fileName=TK%20Party%20Tweaks
+&rootDirectory=true"><p align="center">
 <img src="https://custom-icon-badges.herokuapp.com/badge/-Download-red?style=for-the-badge&logo=download&logoColor=white">
 </p></a>
 <br>

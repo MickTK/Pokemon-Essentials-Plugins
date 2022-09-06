@@ -29,7 +29,10 @@ Bundle of various scripts.
   - Adds customizable shiny odds from breeding based on the number of shiny parents 
 
 <br>
-<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/More_Breeding_Stuff&fileName=More_Breeding_Stuff&rootDirectory=true"><p align="center">
+<a href="https://micktk.github.io/Pokemon-Essentials-Plugins/index.html#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/
+More%20Breeding%20Stuff
+&fileName=More%20Breeding%20Stuff
+&rootDirectory=true"><p align="center">
 <img src="https://custom-icon-badges.herokuapp.com/badge/-Download-red?style=for-the-badge&logo=download&logoColor=white">
 </p></a>
 <br>

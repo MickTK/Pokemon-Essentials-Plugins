@@ -13,15 +13,22 @@ Use HMs with a pokémon which can learn that move (even without knowing it!). Al
 </p>
 
 <br>
-<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/Innate_Hidden_Machines&fileName=Innate_Hidden_Machines&rootDirectory=true"><p align="center">
+<a href="https://micktk.github.io/Pokemon-Essentials-Plugins/index.html#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/
+Innate%20Hidden%20Machines
+&fileName=Innate%20Hidden%20Machines
+&rootDirectory=true"><p align="center">
 <img src="https://custom-icon-badges.herokuapp.com/badge/-Download-red?style=for-the-badge&logo=download&logoColor=white">
 </p></a>
 <br>
 
-## Updates
-- 1.0.3
+<details>
+<summary>Updates</summary>
+
+#### 1.0.3
   - Minor fix
-- 1.0.2
+#### 1.0.2
   - Bug fixes
-- 1.0.1
+#### 1.0.1
   - HMs aren't shown in the party menu when they cannot be used
+
+</details>

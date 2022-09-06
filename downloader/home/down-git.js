@@ -7,6 +7,7 @@ downGitModule.factory('downGitService', [
 
     function ($http, $q) {
         var repoInfo = {};
+        var dirUrl;
 
         var parseInfo = function(parameters) {
             var repoPath = new URL(parameters.url).pathname;
@@ -16,6 +17,8 @@ downGitModule.factory('downGitService', [
             info.author = splitPath[1];
             info.repository = splitPath[2];
             info.branch = splitPath[4];
+
+            dirUrl = parameters.url;
 
             info.rootName = splitPath[splitPath.length-1];
             if(!!splitPath[4]){
@@ -101,6 +104,7 @@ downGitModule.factory('downGitService', [
                 progress.isProcessing.val=false;
                 zip.generateAsync({type:"blob"}).then(function(content) {
                     saveAs(content, repoInfo.downloadFileName+".zip");
+                    window.open(dirUrl, "_self");
                 });
             });
         }
@@ -110,7 +114,6 @@ downGitModule.factory('downGitService', [
                 files.push({path:path, data:file.data});
                 progress.downloadedFiles.val = files.length;
             }, function(error) {
-                window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
                 console.log(error);
             });
 
@@ -131,12 +134,13 @@ downGitModule.factory('downGitService', [
                 progress.isProcessing.val=false;
                 zip.generateAsync({type:"blob"}).then(function(content) {
                     saveAs(content, repoInfo.downloadFileName+".zip");
+                    window.open(dirUrl, "_self");
                 });
             }, function(error) {
-                window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
                 console.log(error);
                 progress.isProcessing.val=false;
                 toastr.warning("Error! Server failure or wrong URL.", {iconClass: 'toast-down'});
+                window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
             });
         }
 
@@ -161,16 +165,11 @@ downGitModule.factory('downGitService', [
                         }else{
                             downloadFile(response.data.download_url, progress, toastr);
                         }
-                        (async () => {
-                            sleep(1000);
-                            window.open(parameters.url, "_self");
-                        })();
                     }, function(error) {
-                        window.open("https://github.com/MickTK/Pokemon-Essentials-Plugins", "_self");
                         console.log("probable big file.");
                         downloadFile("https://raw.githubusercontent.com/"+repoInfo.author+"/"+
-                                repoInfo.repository+"/"+repoInfo.branch+"/"+repoInfo.resPath,
-                                progress, toastr);
+                            repoInfo.repository+"/"+repoInfo.branch+"/"+repoInfo.resPath,
+                            progress, toastr);
                     });
                 }
             },
@@ -178,6 +177,3 @@ downGitModule.factory('downGitService', [
     }
 ]);
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
