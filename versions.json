@@ -2,5 +2,9 @@
   "More Breeding Stuff": {
     "version": "1.0.1",
     "link": "github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/More%20Breeding%20Stuff"
+  },
+  "Wild Level Scaling": {
+    "version": "2.0.0",
+    "link": "github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/Wild%20Level%20Scaling"
   }
 }
