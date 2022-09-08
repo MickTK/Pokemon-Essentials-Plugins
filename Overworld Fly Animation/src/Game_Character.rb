@@ -2,7 +2,7 @@
 # Game_Character
 #===============================================================================
 class Game_Character
-	def opacity=(value)
-		@opacity = value
-	end
+  def opacity=(value)
+    @opacity = value
+  end
 end
