@@ -1,6 +1,7 @@
 Name       = Pokémon File System
-Version    = 1.1.0
+Version    = 1.1.1
 Essentials = 20.1
 Optional   = ZUD Plugin
+Optional   = Pokemon Color Variants
 Website    = github.com/MickTK/Pokemon-Essentials-Plugins
 Credits    = MickTK

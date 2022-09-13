@@ -1,6 +1,6 @@
 ![Category](https://badgen.net/badge/Category/Utility/green)
 ![Essentials](https://badgen.net/badge/Essentials/20.1/orange)
-![Version](https://badgen.net/badge/Version/1.1.0/cyan)
+![Version](https://badgen.net/badge/Version/1.1.1/cyan)
 
 <p align="center">
 <img width="200px" src="https://user-images.githubusercontent.com/63038410/178041105-855c7976-74ef-4400-8a16-a413cd65f489.png">
@@ -48,6 +48,10 @@ Check `settings.rb` for configuration.
 
 <details>
 <summary>Updates</summary>
+
+#### 1.1.1
+- Added Pokemon Color Variants compatibility
+- Added the updater
 
 #### 1.1.0
 - Added ZUD Plugin compatibility for Essentials v20.1

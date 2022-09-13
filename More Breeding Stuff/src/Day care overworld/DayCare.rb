@@ -23,6 +23,13 @@ class DayCare
           event.move_speed     = 3
           event.move_frequency = 3
           event.turn_random
+
+          #=====================================
+          # Pokemon Color Variants compatibility
+          #=====================================
+          if PluginManager.installed?("Pokemon Color Variants")
+            event.character_hue = pkmn.hue ? pkmn.hue : 0
+          end
         else
           # Reset sprite
           event.character_name = ""

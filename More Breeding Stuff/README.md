@@ -1,6 +1,6 @@
 ![Category](https://badgen.net/badge/Category/Utility/green)
 ![Essentials](https://badgen.net/badge/Essentials/20.1/orange)
-![Version](https://badgen.net/badge/Version/1.0.1/cyan)
+![Version](https://badgen.net/badge/Version/1.0.2/cyan)
 
 <h1 align="center">More Breeding Stuff</h1>
 
@@ -53,9 +53,12 @@ Check `settings.rb` for configuration.
 <details>
 <summary>Updates</summary>
 
+#### 1.0.2
+- Added Pokemon Color Variants compatibility
+
 #### 1.0.1
-- Corrected screen path.
-- Corrected directory url.
+- Corrected screen path
+- Corrected directory url
 
 </details>
 <br>

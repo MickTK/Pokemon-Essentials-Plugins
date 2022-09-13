@@ -1,0 +1,7 @@
+Name       = Pokemon Color Variants
+Version    = 1.0.0
+Essentials = 20.1
+Optional   = More Breeding Stuff
+Optional   = Following Pokemon EX
+Website    = github.com/MickTK/Pokemon-Essentials-Plugins
+Credits    = MickTK
