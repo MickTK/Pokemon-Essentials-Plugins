@@ -1,6 +1,6 @@
 ![Category](https://badgen.net/badge/Category/Gameplay/green)
 ![Essentials](https://badgen.net/badge/Essentials/20.1/orange)
-![Version](https://badgen.net/badge/Version/1.0.0/cyan)
+![Version](https://badgen.net/badge/Version/1.0.1/cyan)
 
 <p align="center">
 <img width="200px" src="https://user-images.githubusercontent.com/63038410/189546697-067374fd-5a8d-43d5-941b-cb1f338c09a0.png">
@@ -64,3 +64,12 @@ Setup Following Pokemon EX plugin:
 | Information | Description |
 |:-|:-|
 | `pokemon.hue = 180` | Get/set the pokémon hue. |
+
+<br>
+<details>
+<summary>Updates</summary>
+
+#### 1.0.1
+  - Fixed compatibility bugs with third party plugins
+
+</details>
