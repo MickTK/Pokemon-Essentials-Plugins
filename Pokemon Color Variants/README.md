@@ -70,6 +70,8 @@ You can define the behaviour through `HEREDITY_TYPE`:
 
 This mechanic can be disabled by setting `HEREDITY_TYPE` to `nil`.
 
+<br>
+
 ## Instructions
 Some external plugins require some adds to work.
 
@@ -97,7 +99,6 @@ end
 ```
 
 </details>
-<br>
 
 ### Visible Overworld Wild Encounters setup
 
@@ -116,6 +117,7 @@ event.pages[0].move_frequency = VisibleEncounterSettings::DEFAULT_MOVEMENT[1]
 ```
 
 </details>
+
 <br>
 
 ## Informations
