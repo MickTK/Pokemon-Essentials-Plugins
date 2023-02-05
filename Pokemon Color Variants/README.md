@@ -38,7 +38,6 @@ Forge your rainbow team!
 - 700+ color variants for each pokémon
 - Wild and trainer's pokemon customization
 - Integrated breeding system
-- Compatible with other plugins
 
 <br>
 <a href="https://micktk.github.io/Pokemon-Essentials-Plugins/index.html#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/
@@ -50,7 +49,7 @@ Pokemon%20Color%20Variants
 <br>
 
 Pokemon Color Variants adds the possibility to shift the hue color of a pokémon's sprite to make it looks more unique.
-The plugin uses the hue attribute from RGSS3's Bitmap and Graphic classes.
+The plugin uses the hue attribute from RGSS3's Bitmap and Graphic classes to work.
 
 A debug menu can be used from the party menu: `Debug > Cosmetic info... > Set hue color`.
 
