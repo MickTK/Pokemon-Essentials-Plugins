@@ -1,4 +1,4 @@
-class PokemonColorVariants
+module PokemonColorVariants
   def self.check_for_updates()
     name = "Pokemon Color Variants"
     link = "https://raw.githubusercontent.com/MickTK/Pokemon-Essentials-Plugins/main/versions.json"
@@ -11,5 +11,5 @@ class PokemonColorVariants
     rescue Exception
     end
   end
-  PokemonColorVariants.check_for_updates
+  PokemonColorVariants.check_for_updates if PokemonColorVariants::CHECK_FOR_UPDATES
 end
