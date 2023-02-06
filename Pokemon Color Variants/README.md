@@ -70,6 +70,17 @@ You can define the behaviour through `HEREDITY_TYPE`:
 
 This mechanic can be disabled by setting `HEREDITY_TYPE` to `nil`.
 
+### Trainer's pokemon
+The hue of a trainer's pokemon can be specified in the PBS file `trainers.txt` by adding `Hue = <value>` at the end of the pokemon parameters as shown in the example.
+```
+Pokemon = ONIX,10
+    Gender = male
+    Moves = HEADSMASH,ROCKTHROW,RAGE,ROCKTOMB
+    AbilityIndex = 0
+    IV = 20,20,20,20,20,20
+    Hue = 150
+```
+
 <br>
 
 ## Instructions
