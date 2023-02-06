@@ -4,12 +4,10 @@
 
 <h1 align="center">Innate Hidden Machines</h1>
 
-<p align="center">
-Use HMs with a pokémon which can learn that move (even without knowing it!). Also removed badge requisites. This plugin implements a lot of overrides so watch out for eventually conflicts with other plugins!
-</p>
+Deprecated: use [Improved Field Skills](https://reliccastle.com/resources/1042/) instead.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/63038410/178109131-6c057c0e-aab7-45c4-a0d3-faa979af23a4.png" />
+Use HMs with a pokémon which can learn that move (even without knowing it!). Also removed badge requisites. This plugin implements a lot of overrides so watch out for eventually conflicts with other plugins!
 </p>
 
 <br>

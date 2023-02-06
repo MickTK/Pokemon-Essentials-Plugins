@@ -63,9 +63,9 @@ BLACKLIST = [26, 11]
 <summary>Updates</summary>
 
 #### 2.0.0
-- Added the wild scaling level relative to the average player's party level.
-- Added the save state.
-- Added the updater.
-- Refactored the code.
+- Added the wild scaling level relative to the average player's party level
+- Added the save state
+- Added the updater
+- Refactored the code
 
 </details>
