@@ -27,17 +27,20 @@ Forge your rainbow team!
 <div align="center">
   <details>
   <summary>Community picks ❤️</summary>
-    <img width="500px" src="https://user-images.githubusercontent.com/63038410/216767202-dded7695-8f3b-4c67-a419-f87122cbe246.png">
+    <img width="450px" src="https://user-images.githubusercontent.com/63038410/216767202-dded7695-8f3b-4c67-a419-f87122cbe246.png">
     <p>LilyInTheWater's Pidgey</p><br>
-    <img width="500px" src="https://user-images.githubusercontent.com/63038410/216767426-8a821395-efdb-4a84-922c-0aa356864f7f.png">
-    <p>MaouAlter's Eelektross</p>
+    <img width="450px" src="https://user-images.githubusercontent.com/63038410/216767426-8a821395-efdb-4a84-922c-0aa356864f7f.png">
+    <p>MaouAlter's Eelektross</p><br>
+    <img width="450px" src="https://user-images.githubusercontent.com/63038410/220905142-de4e0835-9ce7-4a1e-95b4-e2785c531416.png">
+    <p>Citycat17's Solgaleo</p>
   </details>
 </div>
 
 ## Overview
-- 700+ color variants for each pokémon
-- Wild and trainer's pokemon customization
+- More than 700 color variants for each pokémon!
+- Highly customizable
 - Integrated breeding system
+- Integrated wild encounter system
 
 <br>
 <a href="https://micktk.github.io/Pokemon-Essentials-Plugins/index.html#/home?url=https://github.com/MickTK/Pokemon-Essentials-Plugins/tree/main/
@@ -48,14 +51,14 @@ Pokemon%20Color%20Variants
 </p></a>
 <br>
 
-Pokemon Color Variants adds the possibility to shift the hue color of a pokémon's sprite to make it looks more unique.
+Pokemon Color Variants adds a function that can shift the hue color of a pokémon's sprite to make it looks more unique.
 The plugin uses the hue attribute from RGSS3's Bitmap and Graphic classes to work.
 
-A debug menu can be used from the party menu: `Debug > Cosmetic info... > Set hue color`.
+A **debug menu** can be used from the party menu: `Debug > Cosmetic info... > Set hue color`.
 
 Check `settings.rb` for the configurations.
 
-### Random of specific hue(s)
+### Random or specific hue(s)
 Pokémons can have random or specific hues.
 This can be defined in the setting `SPECIFIC_HUE_ONLY`.
 If it is `true` you have to add the pokémon id and the hue(s) to `POKEMON_HUE` map as shown in the script (undefined pokémons will have only default color).
