@@ -31,9 +31,9 @@ You can find useful instructions here: [Essentials Docs Wiki](https://essentials
 | `DailyReward.consecutive` | Return the number of consecutive logins.                                                                                        |
 
 ## Download
-| Essentials | Version |                                                                   |
-| :--------: | :-----: | :---------------------------------------------------------------: |
-|    20.1    |  1.1.0  | [Download](releases/v21.1/[v1.1.0]%20Daily%20Reward%20System.zip) |
+| Essentials | Version |                                                                                                                                                             |
+| :--------: | :-----: | :---------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|    20.1    |  1.1.0  | [Download](https://github.com/MickTK/Pokemon-Essentials-Plugins/raw/main/Daily%20Reward%20System/releases/v21.1/%5Bv1.1.0%5D%20Daily%20Reward%20System.zip) |
 
 <details>
 <summary>Changelog</summary>
