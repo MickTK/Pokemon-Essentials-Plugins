@@ -1,9 +1,8 @@
-class DailyReward
-  @@name = "Daily Reward System"
-  def self.check_for_updates()
-    response = pbDownloadToString("https://raw.githubusercontent.com/MickTK/Pokemon-Essentials-Plugins/main/#{@@name.force_encoding("utf-8")}/meta.json")
-    return if response == ""
-    puts response["message"] if response["version"] > PluginManager.version(@@name)
-  end
-  check_for_updates
+def check_for_updates()
+  begin
+    response = pbDownloadToString("https://raw.githubusercontent.com/MickTK/Pokemon-Essentials-Plugins/main/Daily%20Reward%20System/meta.json")
+    response = HTTPLite::JSON.parse(response)
+    puts "\e[32m#{response["message"]}\e[0m" if response["version"] > PluginManager.version("Daily Reward System")
+  rescue; return; end
 end
+check_for_updates
