@@ -16,5 +16,5 @@ Repository with all the plugins I (re)made for <b>Pokémon Essentials</b>.
 
 ### Notes
 - Issues can be posted in the [issues section](https://github.com/MickTK/Pokemon-Essentials-Plugins/issues).
-- Old Essentials versions are not supported..
+- Old Essentials versions are not supported.
 - All the plugins are licensed under [MIT](https://github.com/MickTK/Pokemon-Essentials-Plugins/blob/main/license).
