@@ -8,6 +8,12 @@
 Repository with all the plugins I (re)made for <b>Pokémon Essentials</b>.
 </p>
 
+## Plugins
+- [Pokemon Color Variants](https://github.com/MickTK/PE-Pokemon-Color-Variants)
+- [Daily Reward System](https://github.com/MickTK/PE-Daily-Reward-System)
+- [Overworld Fly Animation](https://github.com/MickTK/PE-Overworld-Fly-Animation)
+- [Wild Level Scaling](https://github.com/MickTK/PE-Wild-Level-Scaling)
+
 ## General instructions
 1. Make a backup of your project.
 2. Download the plugin from the dedicated `README` or the release page.
@@ -17,4 +23,3 @@ Repository with all the plugins I (re)made for <b>Pokémon Essentials</b>.
 ### Notes
 - Issues can be posted in the [issues section](https://github.com/MickTK/Pokemon-Essentials-Plugins/issues).
 - Old Essentials versions are not supported.
-- All the plugins are licensed under [MIT](https://github.com/MickTK/Pokemon-Essentials-Plugins/blob/main/license).
