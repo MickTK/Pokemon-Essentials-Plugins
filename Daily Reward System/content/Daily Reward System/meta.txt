@@ -1,5 +1,0 @@
-Name       = Daily Reward System
-Version    = 1.1.0
-Essentials = 20.1
-Website    = github.com/MickTK/Pokemon-Essentials-Plugins
-Credits    = MickTK
